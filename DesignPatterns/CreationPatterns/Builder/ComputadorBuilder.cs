@@ -6,57 +6,55 @@ public class ComputadorBuilder : IComputadorBuilder
     
     public ComputadorBuilder()
     {
-        _computador.ModeloComputador = "Computador de Escriotorio";
+        _computador.ModeloComputador = "Computador de Escritorio";
     }
-    
-    public void AdicionarPlacaMae(string placaMae)
+
+    public IComputadorBuilder AdicionarPlacaMae(string placaMae)
     {
         _computador.PlacaMae = placaMae;
+        return this;
     }
 
-    public void AdicionarProcessador(string processador)
+    public IComputadorBuilder AdicionarProcessador(string processador)
     {
         _computador.Processador = processador;
+        return this;
     }
 
-    public void AdicionarMemoriaRam(string memoriaRam)
+    public IComputadorBuilder AdicionarMemoriaRam(string memoriaRam)
     {
         _computador.MemoriaRam = memoriaRam;
+        return this;
     }
 
-    public void AdicionarDiscoRigido(string discoRigido)
+    public IComputadorBuilder AdicionarDiscoRigido(string discoRigido)
     {
         _computador.DiscoRigido = discoRigido;
+        return this;
     }
 
-    public void AdicionarFonte(string fonte)
+    public IComputadorBuilder AdicionarFonte(string fonte)
     {
         _computador.Fonte = fonte;
+        return this;
     }
 
-    public void AdicionarGabinete(string gabinete)
+    public IComputadorBuilder AdicionarGabinete(string gabinete)
     {
         _computador.Gabinete = gabinete;
+        return this;
     }
 
-    public void AdicionarPlacaDeVideo(string placaDeVideo)
+    public IComputadorBuilder AdicionarPlacaDeVideo(string placaDeVideo)
     {
         _computador.PlacaDeVideo = placaDeVideo;
+        return this;
     }
 
-    public void InstalarSistemaOperacional(string sistema)
+    public IComputadorBuilder InstalarSistemaOperacional(string sistema)
     {
         _computador.SistemaOperacional = sistema;
-    }
-    public override string ToString()
-    {
-        return _computador.ToString();
-    }
-    public Computador GetComputador()
-    {
-        var computador = _computador;
-        _computador = new Computador();
-        return computador;
+        return this;
     }
 }
 
@@ -68,55 +66,51 @@ public class ComputadorGamerBuilder: IComputadorBuilder
     {
         _computador.ModeloComputador = "PC GAMER X-TEL";
     }
-    public void AdicionarPlacaMae(string placaMae)
+    public IComputadorBuilder AdicionarPlacaMae(string placaMae)
     {
         _computador.PlacaMae = placaMae;
+        return this;
     }
 
-    public void AdicionarProcessador(string processador)
+    public IComputadorBuilder AdicionarProcessador(string processador)
     {
         _computador.Processador = processador;
+        return this;
     }
 
-    public void AdicionarMemoriaRam(string memoriaRam)
+    public IComputadorBuilder AdicionarMemoriaRam(string memoriaRam)
     {
         _computador.MemoriaRam = memoriaRam;
+        return this;
     }
 
-    public void AdicionarDiscoRigido(string discoRigido)
+    public IComputadorBuilder AdicionarDiscoRigido(string discoRigido)
     {
         _computador.DiscoRigido = discoRigido;
+        return this;
     }
 
-    public void AdicionarFonte(string fonte)
+    public IComputadorBuilder AdicionarFonte(string fonte)
     {
         _computador.Fonte = fonte;
+        return this;
     }
 
-    public void AdicionarGabinete(string gabinete)
+    public IComputadorBuilder AdicionarGabinete(string gabinete)
     {
         _computador.Gabinete = gabinete;
+        return this;
     }
 
-    public void AdicionarPlacaDeVideo(string placaDeVideo)
+    public IComputadorBuilder AdicionarPlacaDeVideo(string placaDeVideo)
     {
         _computador.PlacaDeVideo = placaDeVideo;
+        return this;
     }
 
-    public void InstalarSistemaOperacional(string sistema)
+    public IComputadorBuilder InstalarSistemaOperacional(string sistema)
     {
         _computador.SistemaOperacional = sistema;
-    }
-
-    public override string ToString()
-    {
-        return _computador.ToString();
-    }
-
-    public Computador GetComputador()
-    {
-        var computador = _computador;
-        _computador = new Computador();
-        return computador;
+        return this;
     }
 }

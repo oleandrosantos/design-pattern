@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DesignPatterns.CreationPatterns.Builder
 {
-  public class Computador
+  public class Computador : IComputador
   {
     public string PlacaMae { get; set; }
     public string Processador { get; set; }
@@ -40,4 +40,7 @@ namespace DesignPatterns.CreationPatterns.Builder
       return pc.ToString();
     }
   }
+    public interface IComputador
+    {
+    }
 }
