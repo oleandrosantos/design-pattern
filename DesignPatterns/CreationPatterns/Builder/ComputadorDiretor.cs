@@ -11,6 +11,7 @@ public class ComputadorDiretor
 
     public void MontandoPCGamer()
     {
+        ComputadorBuilder = new ComputadorGamerBuilder();
         _computadorBuilder.AdicionarPlacaMae("ASUS A123456-BR")
                             .AdicionarProcessador("Ryzen 7")
                             .AdicionarMemoriaRam("32 Gbs")
@@ -22,6 +23,7 @@ public class ComputadorDiretor
     }
     public void MontandoPCEscritorio()
     {
+        ComputadorBuilder = new ComputadorBuilder();
         _computadorBuilder.AdicionarPlacaMae("ASUS A123456-BR")
                             .AdicionarProcessador("Ryzen 3")
                             .AdicionarMemoriaRam("8 Gbs")

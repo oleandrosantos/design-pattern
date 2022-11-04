@@ -4,9 +4,17 @@ public class ComputadorBuilder : IComputadorBuilder
 {
     private Computador _computador = new Computador();
     
-    public ComputadorBuilder()
+    public ComputadorBuilder(string? modeloComputador = null)
     {
-        _computador.ModeloComputador = "Computador de Escritorio";
+        if (string.IsNullOrEmpty(modeloComputador))
+            _computador.ModeloComputador = "Computador de Escritorio";
+        else
+            _computador.ModeloComputador = modeloComputador;
+    }
+
+    public static IComputadorBuilder getComputadorBuilder(string? modeloComputador = null)
+    {
+        return new ComputadorBuilder(modeloComputador);
     }
 
     public IComputadorBuilder AdicionarPlacaMae(string placaMae)
@@ -55,6 +63,11 @@ public class ComputadorBuilder : IComputadorBuilder
     {
         _computador.SistemaOperacional = sistema;
         return this;
+    }
+
+    public override string ToString()
+    {
+        return _computador.ToString();
     }
 }
 
@@ -62,10 +75,19 @@ public class ComputadorGamerBuilder: IComputadorBuilder
 {
     private Computador _computador = new Computador();
 
-    public ComputadorGamerBuilder()
+    public ComputadorGamerBuilder(string? modeloComputador = null)
     {
-        _computador.ModeloComputador = "PC GAMER X-TEL";
+        if (string.IsNullOrEmpty(modeloComputador))
+            _computador.ModeloComputador = "PC GAMER X-TEL";
+        else 
+            _computador.ModeloComputador = modeloComputador;
     }
+
+    public static IComputadorBuilder getComputadorBuilder(string? NomeComputador = null)
+    {
+        return new ComputadorGamerBuilder(NomeComputador);
+    }
+
     public IComputadorBuilder AdicionarPlacaMae(string placaMae)
     {
         _computador.PlacaMae = placaMae;
@@ -112,5 +134,10 @@ public class ComputadorGamerBuilder: IComputadorBuilder
     {
         _computador.SistemaOperacional = sistema;
         return this;
+    }
+
+    public override string ToString()
+    {
+        return _computador.ToString();
     }
 }
