@@ -48,6 +48,16 @@ public class ComputadorBuilder : IComputadorBuilder
     {
         _computador.SistemaOperacional = sistema;
     }
+    public override string ToString()
+    {
+        return _computador.ToString();
+    }
+    public Computador GetComputador()
+    {
+        var computador = _computador;
+        _computador = new Computador();
+        return computador;
+    }
 }
 
 public class ComputadorGamerBuilder: IComputadorBuilder
@@ -96,5 +106,17 @@ public class ComputadorGamerBuilder: IComputadorBuilder
     public void InstalarSistemaOperacional(string sistema)
     {
         _computador.SistemaOperacional = sistema;
+    }
+
+    public override string ToString()
+    {
+        return _computador.ToString();
+    }
+
+    public Computador GetComputador()
+    {
+        var computador = _computador;
+        _computador = new Computador();
+        return computador;
     }
 }

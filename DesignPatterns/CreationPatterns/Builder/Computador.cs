@@ -19,23 +19,23 @@ namespace DesignPatterns.CreationPatterns.Builder
     public override string ToString()
     {
       StringBuilder pc = new StringBuilder();
-      pc.Append($"** {ModeloComputador} **");
+      pc.AppendLine($"** {ModeloComputador} **");
       if (!string.IsNullOrEmpty(Processador))
-        pc.Append($"Processador: {Processador}");
+        pc.AppendLine($"Processador: {Processador}");
       if (!string.IsNullOrEmpty(PlacaMae))
-        pc.Append($"Placa Mãe: {PlacaMae}");
+        pc.AppendLine($"Placa Mãe: {PlacaMae}");
       if (!string.IsNullOrEmpty(MemoriaRam))
-        pc.Append($"Memoria RAM: {MemoriaRam}");
+        pc.AppendLine($"Memoria RAM: {MemoriaRam}");
       if (!string.IsNullOrEmpty(PlacaDeVideo))
-        pc.Append($"Placa De Video: {PlacaDeVideo}");
+        pc.AppendLine($"Placa De Video: {PlacaDeVideo}");
       if (!string.IsNullOrEmpty(DiscoRigido))
-        pc.Append($"Disco Rigido: {DiscoRigido}");
+        pc.AppendLine($"Disco Rigido: {DiscoRigido}");
       if (!string.IsNullOrEmpty(SistemaOperacional))
-        pc.Append($"Sistema Operacional: {SistemaOperacional}");
+        pc.AppendLine($"Sistema Operacional: {SistemaOperacional}");
       if (!string.IsNullOrEmpty(Gabinete))
-        pc.Append($"Gabinete: {Gabinete}");
+        pc.AppendLine($"Gabinete: {Gabinete}");
       if (!string.IsNullOrEmpty(Fonte))
-        pc.Append($"Fonte: {Fonte}");
+        pc.AppendLine($"Fonte: {Fonte}");
 
       return pc.ToString();
     }
