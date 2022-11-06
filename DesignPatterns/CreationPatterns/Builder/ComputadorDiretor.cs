@@ -34,4 +34,6 @@ public class ComputadorDiretor
     }
 
     public IComputadorBuilder GetComputador() => _computadorBuilder;
+
+    public void Reset() => _computadorBuilder = null;
 }
